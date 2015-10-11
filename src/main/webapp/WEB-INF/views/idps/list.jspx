@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_capgemini_pmo_entity_IDP" items="${idps}" z="/TxNfGiiCQ25DMY+2otz1I7fZSg=">
+        <table:table data="${idps}" id="l_com_capgemini_pmo_entity_IDP" path="/idps" z="HM5ewGvZMEFxlKw5cOAcbPIHQ9I=">
+            <table:column id="c_com_capgemini_pmo_entity_IDP_buorg" property="buorg" z="9R65+8HIEXTSyb71zwPZ99p6bJc="/>
+            <table:column id="c_com_capgemini_pmo_entity_IDP_name" property="name" z="CXgwd5F2kjIPrnQpbdOq7y/DM8c="/>
+            <table:column id="c_com_capgemini_pmo_entity_IDP_idphead" property="idphead" z="hikmLwIljqwt4TbIUNYwCg4TLtc="/>
+            <table:column id="c_com_capgemini_pmo_entity_IDP_ActiveFlag" property="activeFlag" z="xxgu4nneogsSDb/TGfa7wLlHtC0="/>
+        </table:table>
+    </page:list>
+</div>

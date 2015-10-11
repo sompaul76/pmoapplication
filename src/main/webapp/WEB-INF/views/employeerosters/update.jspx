@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_capgemini_pmo_entity_EmployeeRoster" modelAttribute="employeeRoster" path="/employeerosters" versionField="Version" z="CLnB1RRVz/neMOnqr1KJDI0KT1A=">
+        <field:select field="emp" id="c_com_capgemini_pmo_entity_EmployeeRoster_emp" itemValue="id" items="${employeemasters}" path="/employeemasters" required="true" z="ndADM5Nh7PgV6EbObRD2AsCdMaI="/>
+        <field:select field="projectcode" id="c_com_capgemini_pmo_entity_EmployeeRoster_projectcode" itemValue="id" items="${projects}" path="/projects" required="true" z="d1Tk3eRXOMu/5qq7j0ivil1Ph0o="/>
+        <field:datetime dateTimePattern="${employeeRoster_taggingstartdate_date_format}" field="taggingstartdate" id="c_com_capgemini_pmo_entity_EmployeeRoster_taggingstartdate" required="true" z="XNN7owbUKIHLzxbPQIAfGetULwQ="/>
+        <field:datetime dateTimePattern="${employeeRoster_taggingenddate_date_format}" field="taggingenddate" id="c_com_capgemini_pmo_entity_EmployeeRoster_taggingenddate" required="true" z="IXBUb2U9JxfNH+9SW+nZwqNiqhE="/>
+        <field:select field="billability" id="c_com_capgemini_pmo_entity_EmployeeRoster_billability" items="${empbillabilitys}" path="empbillabilitys" required="true" z="5kSOPyiPzvW/pwf7Woal1Lp8snA="/>
+        <field:input field="availability" id="c_com_capgemini_pmo_entity_EmployeeRoster_availability" max="100" validationMessageCode="field_invalid_integer" z="NtkGlq8DM/at/+jq4Aq5AjxzjTc="/>
+        <field:textarea field="source" id="c_com_capgemini_pmo_entity_EmployeeRoster_source" z="BGKTn7CXyqU8I5SC5rSk0rFOxRY="/>
+        <field:select field="accountstatus" id="c_com_capgemini_pmo_entity_EmployeeRoster_accountstatus" items="${accountstatuses}" path="accountstatuses" required="true" z="kB7TWkc6dR4bfnY5iK+/E4Y+2Ss="/>
+        <field:datetime dateTimePattern="${employeeRoster_accntstartdate_date_format}" field="accntstartdate" id="c_com_capgemini_pmo_entity_EmployeeRoster_accntstartdate" z="bPRe8hmNaKsxM1CgcyTIUryagHY="/>
+        <field:datetime dateTimePattern="${employeeRoster_rolloffdate_date_format}" field="rolloffdate" id="c_com_capgemini_pmo_entity_EmployeeRoster_rolloffdate" z="dU9+4yN1pMlNC4gKEAIjhrwK7Zk="/>
+        <field:textarea field="rolloffreason" id="c_com_capgemini_pmo_entity_EmployeeRoster_rolloffreason" z="P8mYYqJ6qkWxJCljQpV3BKl6U8g="/>
+        <field:textarea field="pmocomments" id="c_com_capgemini_pmo_entity_EmployeeRoster_pmocomments" z="Y5zeDB8N9f0YrERsvHdhwWpbLyM="/>
+    </form:update>
+</div>

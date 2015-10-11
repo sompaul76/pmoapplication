@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByAccountstatusEquals" id="ff_com_capgemini_pmo_entity_EmployeeRoster" path="/employeerosters" z="BvB+YpvYIMi4/gpawdXGtUhz3Co=">
+        <field:input field="accountstatus" id="c_com_capgemini_pmo_entity_EmployeeRoster_accountstatus" required="true" z="X57E/0Dx1+ii/J1hpvnt8U5lDT0="/>
+        <field:select disableFormBinding="true" field="accountstatus" id="f_com_capgemini_pmo_entity_EmployeeRoster_accountstatus" items="${accountstatuses}" path="/accountstatuses" required="true" z="xRPv06CnjzrhWbeyVC6Tse2jX7w="/>
+    </form:find>
+</div>

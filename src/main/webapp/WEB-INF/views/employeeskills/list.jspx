@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_capgemini_pmo_entity_EmployeeSkill" items="${employeeskills}" z="s49Ajyb1QAzxbrmHd3EwYml5Rs8=">
+        <table:table data="${employeeskills}" id="l_com_capgemini_pmo_entity_EmployeeSkill" path="/employeeskills" z="OEvF1Eo+ENobXLr9Qtg2yeYJKsc=">
+            <table:column id="c_com_capgemini_pmo_entity_EmployeeSkill_emp" property="emp" z="AbriVWjqWt5/gtY0JS7Nw9tn2FE="/>
+            <table:column id="c_com_capgemini_pmo_entity_EmployeeSkill_skill" property="skill" z="KlU6HIHhsG4oHvkAgCwURkuM5Vk="/>
+            <table:column id="c_com_capgemini_pmo_entity_EmployeeSkill_primaryskill" property="primaryskill" z="pSf7UWmyKUd+q6rhH2xI11nfo5Q="/>
+            <table:column id="c_com_capgemini_pmo_entity_EmployeeSkill_yrofexp" property="yrofexp" z="jXKMjuLskcsPYVtScl1Q+Nn7lzI="/>
+            <table:column id="c_com_capgemini_pmo_entity_EmployeeSkill_secndryskill" property="secndryskill" z="9YQ35PMWD6HtYmwKd0RkN1fnNvs="/>
+        </table:table>
+    </page:list>
+</div>

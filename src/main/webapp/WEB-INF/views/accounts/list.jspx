@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_capgemini_pmo_entity_Account" items="${accounts}" z="rVvhliHknAPdc8ui2G12nwLCarA=">
+        <table:table data="${accounts}" id="l_com_capgemini_pmo_entity_Account" path="/accounts" z="gGobQpfA7yo56u6qiH7YJW5NBEU=">
+            <table:column id="c_com_capgemini_pmo_entity_Account_idp" property="idp" z="9nmemJKSdlVI9LoqnBGLKXXCFzs="/>
+            <table:column id="c_com_capgemini_pmo_entity_Account_name" property="name" z="uy6Km+mhqUIxSOAmoYA/Oa8xcqY="/>
+            <table:column id="c_com_capgemini_pmo_entity_Account_accountexec" property="accountexec" z="rTsWWM75HiefjQckfIJkfR3q644="/>
+            <table:column id="c_com_capgemini_pmo_entity_Account_pmocontact" property="pmocontact" z="kVQ7Jp/E79DY21qzxBxmnZruphc="/>
+            <table:column id="c_com_capgemini_pmo_entity_Account_headcount" property="headcount" z="tUaLwTKbZnuQEB5su7ywlLbL9ho="/>
+        </table:table>
+    </page:list>
+</div>

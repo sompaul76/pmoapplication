@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_capgemini_pmo_entity_EmployeeRoster" items="${employeerosters}" z="cTAmouJn6EMKvy3VSfcPbnXW58g=">
+        <table:table data="${employeerosters}" id="l_com_capgemini_pmo_entity_EmployeeRoster" path="/employeerosters" z="Qa1fxNYOZa4Ty6zjhyafFZC9W1g=">
+            <table:column id="c_com_capgemini_pmo_entity_EmployeeRoster_emp" property="emp" z="HtG+uVGnrce1aK1BT5V7J/61H7Q="/>
+            <table:column id="c_com_capgemini_pmo_entity_EmployeeRoster_projectcode" property="projectcode" z="4pPPzi1bQwUzjUWvlY3bg5dV7Z0="/>
+            <table:column calendar="true" dateTimePattern="${employeeRoster_taggingstartdate_date_format}" id="c_com_capgemini_pmo_entity_EmployeeRoster_taggingstartdate" property="taggingstartdate" z="3N/w7KoJQrKNa1XyNLctur76A6Y="/>
+            <table:column calendar="true" dateTimePattern="${employeeRoster_taggingenddate_date_format}" id="c_com_capgemini_pmo_entity_EmployeeRoster_taggingenddate" property="taggingenddate" z="8CPjQrhlatG/H8hXb5EH7f5MgEs="/>
+            <table:column id="c_com_capgemini_pmo_entity_EmployeeRoster_billability" property="billability" z="yTALZbooG6gdR9g52njUcqcXSyk="/>
+            <table:column id="c_com_capgemini_pmo_entity_EmployeeRoster_accountstatus" property="accountstatus" z="ZWxMXO8GoSdbE24yJK0jtZcKBIE="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_capgemini_pmo_entity_EmployeeSkill" modelAttribute="employeeSkill" path="/employeeskills" versionField="Version" z="+bjPktbpnmAOPuKsLh4niscBTNM=">
+        <field:select field="emp" id="c_com_capgemini_pmo_entity_EmployeeSkill_emp" itemValue="id" items="${employeemasters}" path="/employeemasters" required="true" z="3O5pCsdO8M+YhUnzTeQktuJ5syE="/>
+        <field:select field="primaryskill" id="c_com_capgemini_pmo_entity_EmployeeSkill_primaryskill" items="${primarysecondarys}" path="primarysecondarys" required="true" z="j9VR87weOT9Lp9L+8EMV/Ii5tE4="/>
+        <field:select field="skill" id="c_com_capgemini_pmo_entity_EmployeeSkill_skill" itemValue="id" items="${skillses}" path="/skillses" z="HaFA1HjO2ca7jz9jh60QCA2384g="/>
+        <field:select field="secndryskill" id="c_com_capgemini_pmo_entity_EmployeeSkill_secndryskill" itemValue="id" items="${skillses}" path="/skillses" z="6kogn4FWodgtq5jJgogouRnG+Yk="/>        
+        <field:input field="yrofexp" id="c_com_capgemini_pmo_entity_EmployeeSkill_yrofexp" validationMessageCode="field_invalid_number" z="urAqb40KNn6yd5lO/JBwpNwwhwY="/>
+    </form:update>
+</div>

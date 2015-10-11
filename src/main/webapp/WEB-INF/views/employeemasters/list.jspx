@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:roo="urn:jsptagdir:/WEB-INF/tags/util" xmlns:spring="http://www.springframework.org/tags" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <script type="text/javascript">dojo.require('dijit.TitlePane');</script>
+    <div id="_title_div">
+        <spring:message code="label_com_capgemini_pmo_entity_employeemaster" var="entity_label"/>
+        <spring:message code="label_com_capgemini_pmo_entity_employeemaster_plural" var="entity_label_plural"/>
+        <spring:message arguments="${entity_label_plural}" code="entity_list_all" var="title_msg"/>
+        <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_title_div', widgetType : 'dijit.TitlePane', widgetAttrs : {title: '${title_msg}'}})); </script>
+        <c:if test="${not empty employeemasters}">
+            <table width="300px">
+                <thead>
+                    <tr>
+                        <th>Emp</th>
+                        <th>Emp Code</th>
+                        <th>Emp Name</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th/>
+                        <th/>
+                        <th/>
+                    </tr>
+                </thead>
+                <c:forEach items="${employeemasters}" var="employeemaster">
+                    <tr>
+                        <td height="50px" width="50px">
+                            <img height="50px" src="/employeemasters/${employeemaster.id}/image" width="50px"/>
+                        </td>
+                        <td>
+                            <c:out value="${employeemaster.empnum}"/>
+                        </td>
+                        <td>
+                            <c:out value="${employeemaster.name}"/>
+                        </td>
+                        <td>
+                            <c:out value="${employeemaster.gender}"/>
+                        </td>
+                        <td>
+                            <c:out value="${employeemaster.email}"/>
+                        </td>
+                        <td>
+                            <c:out value="${employeemaster.mobile}"/>
+                        </td>
+                        <td>
+                            <c:out value="${employeemaster.empstatus}"/>
+                        </td>
+                        <td>
+                            <spring:url value="/employeemasters/${employeemaster.id}" var="show_form_url"/>
+                            <spring:url value="/resources/images/show.png" var="show_image_url"/>
+                            <form:form action="${show_form_url}" method="GET">
+                                <spring:message arguments="${entity_label}" code="entity_show" var="show_label"/>
+                                <input alt="${show_label}" class="image" src="${show_image_url}" title="${show_label}" type="image" value="${show_label}"/>
+                            </form:form>
+                        </td>
+                        <td>
+                            <spring:url value="/employeemasters/${employeemaster.id}/form" var="update_form_url"/>
+                            <spring:url value="/resources/images/update.png" var="update_image_url"/>
+                            <form:form action="${update_form_url}" method="GET">
+                                <spring:message arguments="${entity_label}" code="entity_update" var="update_label"/>
+                                <input alt="${update_label}" class="image" src="${update_image_url}" title="${update_label}" type="image" value="${update_label}"/>
+                            </form:form>
+                        </td>
+                        <td>
+                            <spring:url value="/employeemasters/${employeemaster.id}" var="delete_form_url"/>
+                            <spring:url value="/resources/images/delete.png" var="delete_image_url"/>
+                            <form:form action="${delete_form_url}" method="DELETE">
+                                <spring:message arguments="${entity_label}" code="entity_delete" var="delete_label"/>
+                                <input alt="${delete_label}" class="image" src="${delete_image_url}" title="${delete_label}" type="image" value="${delete_label}"/>
+                                <c:if test="${not empty param.page}">
+                                    <input name="page" type="hidden" value="${param.page}"/>
+                                </c:if>
+                                <c:if test="${not empty param.size}">
+                                    <input name="size" type="hidden" value="${param.size}"/>
+                                </c:if>
+                            </form:form>
+                        </td>
+                    </tr>
+                </c:forEach>
+                <tr class="footer">
+                    <td colspan="8">
+                        <span class="new">
+                            <spring:url value="/employeemasters/form" var="create_url"/>
+                            <a href="${create_url}">
+                                <spring:url value="/resources/images/add.png" var="create_img_url"/>
+                                <spring:message arguments="${entity_label}" code="global_menu_new" var="add_message"/>
+                                <img alt="${add_message}" src="${create_img_url}" title="${add_message}"/>
+                            </a>
+                        </span>
+                        <c:if test="${not empty maxPages}">
+                            <roo:pagination maxPages="${maxPages}" page="${param.page}" size="${param.size}"/>
+                        </c:if>
+                    </td>
+                </tr>
+            </table>
+        </c:if>
+        <c:if test="${empty employeemasters}">
+            <spring:message arguments="${entity_label_plural}" code="entity.not.found"/>
+        </c:if>
+    </div>
+ </div>

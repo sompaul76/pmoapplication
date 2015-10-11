@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_capgemini_pmo_entity_EmployeeMaster" object="${employeemaster}" path="/employeemasters" z="JdeHJG80COvaMqawCyaBdw57ZPk=">
+        <field:display field="idp" id="s_com_capgemini_pmo_entity_EmployeeMaster_idp" object="${employeemaster}" z="qaIeakUkGwjBP9n6tnBoLcW+1Jg="/>
+        <field:display field="srvcline" id="s_com_capgemini_pmo_entity_EmployeeMaster_srvcline" object="${employeemaster}" z="Eq1rO7dm3cxQXCHZRihkrGvWc7w="/>
+        <field:display field="empnum" id="s_com_capgemini_pmo_entity_EmployeeMaster_empnum" object="${employeemaster}" z="1RmBeLlCIisUt7UVZMjvIeGIoG0="/>
+        <field:display field="name" id="s_com_capgemini_pmo_entity_EmployeeMaster_name" object="${employeemaster}" z="lXcvAGiPtCjfB8NAMo/pnkSY3Nw="/>
+        <field:display field="gender" id="s_com_capgemini_pmo_entity_EmployeeMaster_gender" object="${employeemaster}" z="O2EYT/sXb03JUYKabuCD7rbQf58="/>
+        <field:display field="emptype" id="s_com_capgemini_pmo_entity_EmployeeMaster_emptype" object="${employeemaster}" z="ZeCwCMADfTtAuBQrn4rl6H0Ky/I="/>
+        <field:display field="empstatus" id="s_com_capgemini_pmo_entity_EmployeeMaster_empstatus" object="${employeemaster}" z="rJZTG0KKNr1RXLa1wX+eoYrC8kU="/>
+        <field:display field="band" id="s_com_capgemini_pmo_entity_EmployeeMaster_band" object="${employeemaster}" z="SNmw3q8LsZ/svQtElkhdQ99+3Uw="/>
+        <field:display field="emplevel" id="s_com_capgemini_pmo_entity_EmployeeMaster_emplevel" object="${employeemaster}" z="11sWzrkQnxW3Pu9m4qYiPZqUkv0="/>
+        <field:display field="location" id="s_com_capgemini_pmo_entity_EmployeeMaster_location" object="${employeemaster}" z="4UZpDHiG8mG4gjo2XFvSgaRSR8k="/>
+        <field:display calendar="true" dateTimePattern="${employeeMaster_doj_date_format}" field="doj" id="s_com_capgemini_pmo_entity_EmployeeMaster_doj" object="${employeemaster}" z="XNi23I8VLze+VuHnByncISy/zp0="/>
+        <field:display calendar="true" dateTimePattern="${employeeMaster_dob_date_format}" field="dob" id="s_com_capgemini_pmo_entity_EmployeeMaster_dob" object="${employeemaster}" z="8gXqwZKoJeEUaNXztaLSIyCu1N4="/>
+        <field:display field="email" id="s_com_capgemini_pmo_entity_EmployeeMaster_email" object="${employeemaster}" z="V5U4Rwe9z55mSDY1xIuQ8hkvD5Y="/>
+        <field:display field="mobile" id="s_com_capgemini_pmo_entity_EmployeeMaster_mobile" object="${employeemaster}" z="0FmntsAsvd6t0xMEYIKoIpOTeC0="/>
+        <field:display field="cgid" id="s_com_capgemini_pmo_entity_EmployeeMaster_cgid" object="${employeemaster}" z="0hZsPrlmaRVZH0yZk3uk6EJNyoQ="/>
+        <field:display field="industryexp" id="s_com_capgemini_pmo_entity_EmployeeMaster_industryexp" object="${employeemaster}" z="CoVptoWVQw1STdsyxfAglk9EbRw="/>
+        <field:display field="image" id="s_com_capgemini_pmo_entity_EmployeeMaster_image" object="${employeemaster}" render="false" z="user-managed"/>
+        <field:display field="contentType" id="s_com_capgemini_pmo_entity_EmployeeMaster_contentType" object="${employeemaster}" render="false" z="user-managed"/>
+        <img height="256px" src="${employeemaster.id}/image"/>
+        <field:display field="primaryskill" id="s_com_capgemini_pmo_entity_EmployeeMaster_primaryskill" object="${employeemaster}" z="3A6YG3JE7cORQ1SIcDt6l1RDgbs="/>
+        <field:display field="secskill" id="s_com_capgemini_pmo_entity_EmployeeMaster_secskill" object="${employeemaster}" z="bVuWULVjvakfRC3T1W4l7Ndq3OI="/>
+    </page:show>
+</div>

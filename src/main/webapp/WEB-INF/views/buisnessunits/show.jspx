@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_capgemini_pmo_entity_BuisnessUnit" object="${buisnessunit}" path="/buisnessunits" z="33oTrQuJ4MmwYhMz75CLrKCksFk=">
+        <field:display field="BUName" id="s_com_capgemini_pmo_entity_BuisnessUnit_BUName" object="${buisnessunit}" z="2aM9JWHcRiJPoJQ1xBoFSW3hj7s="/>
+        <field:display field="BUHead" id="s_com_capgemini_pmo_entity_BuisnessUnit_BUHead" object="${buisnessunit}" z="8Li5QwV9l701O/5y2EBO7NRbquo="/>
+        <field:display field="BUActive" id="s_com_capgemini_pmo_entity_BuisnessUnit_BUActive" object="${buisnessunit}" z="PD+QfgvmeW9lQpDj9Yq7yFmN6Ic="/>
+    </page:show>
+</div>

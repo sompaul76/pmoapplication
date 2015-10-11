@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_capgemini_pmo_entity_EmployeeMaster" modelAttribute="employeeMaster" multipart="true" path="/employeemasters" versionField="Version" z="user-managed">
+        <field:select field="idp" id="c_com_capgemini_pmo_entity_EmployeeMaster_idp" itemValue="id" items="${idps}" path="/idps" z="Fbam/7SSEi81SndIRq/48FiYlxQ="/>
+        <field:select field="srvcline" id="c_com_capgemini_pmo_entity_EmployeeMaster_srvcline" itemValue="id" items="${servicelines}" path="/servicelines" z="otiJjZWzAotTtHYvaixntV6gCYE="/>
+        <field:input field="empnum" id="c_com_capgemini_pmo_entity_EmployeeMaster_empnum" required="true" validationMessageCode="field_invalid_number" z="L7rfMURWawJdMXarNGnJrfWe690="/>
+        <field:input field="name" id="c_com_capgemini_pmo_entity_EmployeeMaster_name" required="true" z="user-managed"/>
+        <field:select field="gender" id="c_com_capgemini_pmo_entity_EmployeeMaster_gender" items="${genders}" path="genders" required="true" z="sEKR+v8edGbG3Bj65DN0CMX3JlQ="/>
+        <field:select field="emptype" id="c_com_capgemini_pmo_entity_EmployeeMaster_emptype" items="${employeetypes}" path="employeetypes" required="true" z="4b3X8wfIaGHIJ4qU9P7PELRKMVo="/>
+        <field:select field="empstatus" id="c_com_capgemini_pmo_entity_EmployeeMaster_empstatus" items="${accountactivestatuses}" path="accountactivestatuses" required="true" z="ZL3FZDookykwM3tASsqb2f1UdQo="/>
+        <field:select field="band" id="c_com_capgemini_pmo_entity_EmployeeMaster_band" items="${empbands}" path="empbands" required="true" z="JS5evWYHGugPYncAWX9Wjynu3e0="/>
+        <field:select field="emplevel" id="c_com_capgemini_pmo_entity_EmployeeMaster_emplevel" items="${emplevels}" path="emplevels" required="true" z="/bXPq6WRzKe4hI6VdiauSvLRm8Q="/>
+        <field:select field="location" id="c_com_capgemini_pmo_entity_EmployeeMaster_location" items="${emplocations}" path="emplocations" required="true" z="LqSjf0NYhLKK+YOVc0ogEBm5F7k="/>
+        <field:datetime dateTimePattern="${employeeMaster_doj_date_format}" field="doj" id="c_com_capgemini_pmo_entity_EmployeeMaster_doj" z="wUxxoF5z4Dh5jujhsNkEiNRpdfo="/>
+        <field:datetime dateTimePattern="${employeeMaster_dob_date_format}" field="dob" id="c_com_capgemini_pmo_entity_EmployeeMaster_dob" z="lZLyFZwfqIPIhvAml8N0e1ldvhI="/>
+        <field:input field="email" id="c_com_capgemini_pmo_entity_EmployeeMaster_email" validationMessageCode="field_invalid_email" z="user-managed"/>
+        <field:input field="mobile" id="c_com_capgemini_pmo_entity_EmployeeMaster_mobile" max="12" z="1eX6qAOssz7A3EyFDl6ew81/NFY="/>
+        <field:input field="cgid" id="c_com_capgemini_pmo_entity_EmployeeMaster_cgid" max="10" z="scMClhFor2jl54VKvpK3PbOybe0="/>
+        <field:input field="industryexp" id="c_com_capgemini_pmo_entity_EmployeeMaster_industryexp" validationMessageCode="field_invalid_number" z="AcimBaYRoZvr3leSOZZGkXv5dFM="/>
+        <field:input field="image" id="c_com_capgemini_pmo_entity_EmployeeMaster_image" type="file" z="user-managed"/>
+        <field:input field="contentType" id="c_com_capgemini_pmo_entity_EmployeeMaster_contentType" render="false" z="user-managed"/>
+        <field:select field="primaryskill" id="c_com_capgemini_pmo_entity_EmployeeMaster_primaryskill" itemValue="id" items="${skillses}" path="/skillses" z="gYUER/V/arvTAj28C9ClAt8V94E="/>
+        <field:select field="secskill" id="c_com_capgemini_pmo_entity_EmployeeMaster_secskill" itemValue="id" items="${skillses}" multiple="true" path="/skillses" z="nM6+sC2fWWmUwjs6LN6HYlIs8GM="/>
+    </form:update>
+</div>

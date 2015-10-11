@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_capgemini_pmo_entity_ServiceLineSkillMap" object="${servicelineskillmap}" path="/servicelineskillmaps" z="i1SAlZa+aXe/34mt4H1y5JllWvg=">
+        <field:display field="idpsrvcline" id="s_com_capgemini_pmo_entity_ServiceLineSkillMap_idpsrvcline" object="${servicelineskillmap}" z="l6/8R/QFrY4VFyEO5ewbnH5cdNg="/>
+        <field:display field="skill" id="s_com_capgemini_pmo_entity_ServiceLineSkillMap_skill" object="${servicelineskillmap}" z="bc9RGSpVljfb6bAEpah9cyupmsg="/>
+    </page:show>
+</div>

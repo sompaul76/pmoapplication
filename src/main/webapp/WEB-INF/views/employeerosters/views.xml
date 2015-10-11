@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="employeerosters/list">
+        <put-attribute name="body" value="/WEB-INF/views/employeerosters/list.jspx"/>
+    </definition>
+<definition extends="default" name="employeerosters/show">
+        <put-attribute name="body" value="/WEB-INF/views/employeerosters/show.jspx"/>
+    </definition>
+<definition extends="default" name="employeerosters/create">
+        <put-attribute name="body" value="/WEB-INF/views/employeerosters/create.jspx"/>
+    </definition>
+<definition extends="default" name="employeerosters/update">
+        <put-attribute name="body" value="/WEB-INF/views/employeerosters/update.jspx"/>
+    </definition>
+<definition extends="default" name="employeerosters/onboard">
+        <put-attribute name="body" value="/WEB-INF/views/employeerosters/onboard.jspx"/>
+</definition>
+<definition extends="default" name="employeerosters/findEmployeeRostersByAccountstatusEquals">
+        <put-attribute name="body" value="/WEB-INF/views/employeerosters/findEmployeeRostersByAccountstatusEquals.jspx"/>
+    </definition>
+</tiles-definitions>

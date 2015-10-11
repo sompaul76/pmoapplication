@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_capgemini_pmo_entity_AppsServiceLine" modelAttribute="appsServiceLine" path="/appsservicelines" versionField="Version" z="2GeTY5Wzfj4sSc7rAeAhDBORNd8=">
+        <field:select field="idp" id="c_com_capgemini_pmo_entity_AppsServiceLine_idp" itemValue="id" items="${idps}" path="/idps" required="true" z="A96ux8PwD+QYnWZKv10qxmGl8K4="/>
+        <field:select field="serviceline" id="c_com_capgemini_pmo_entity_AppsServiceLine_serviceline" itemValue="id" items="${servicelines}" path="/servicelines" required="true" z="ri/UgHlMaPCAWmLTo4C73Cdcumg="/>
+        <field:select field="Active" id="c_com_capgemini_pmo_entity_AppsServiceLine_Active" items="${activeinactiveflags}" path="activeinactiveflags" z="8sj74vYkajvKqoqJm1z1/q6zu8U="/>
+        <field:select field="skills" id="c_com_capgemini_pmo_entity_AppsServiceLine_skills" itemValue="id" items="${skillses}" multiple="true" path="/skillses" z="8XtyutNf4ssy+ZpMOPVysQaCcM4="/>
+    </form:update>
+</div>

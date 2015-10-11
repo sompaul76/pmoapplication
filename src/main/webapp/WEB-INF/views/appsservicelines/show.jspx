@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_capgemini_pmo_entity_AppsServiceLine" object="${appsserviceline}" path="/appsservicelines" z="niUXagqhcsMoVxInHipnUWsuUhU=">
+        <field:display field="idp" id="s_com_capgemini_pmo_entity_AppsServiceLine_idp" object="${appsserviceline}" z="/bf0zkA80cg2sGwPKgsJeYa6z/0="/>
+        <field:display field="serviceline" id="s_com_capgemini_pmo_entity_AppsServiceLine_serviceline" object="${appsserviceline}" z="T3L0+1oaNULQE7yMBB/OUvq3TKc="/>
+        <field:display field="active" id="s_com_capgemini_pmo_entity_AppsServiceLine_Active" object="${appsserviceline}" z="8HV4ZtmWUXBj6SWue80NaQiPIcg="/>
+        <field:display field="skills" id="s_com_capgemini_pmo_entity_AppsServiceLine_skills" object="${appsserviceline}" z="WW2US7NE1e48ewmlgVGT6be4IoY="/>
+    </page:show>
+</div>

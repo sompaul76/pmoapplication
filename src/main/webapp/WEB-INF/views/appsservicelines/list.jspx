@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_capgemini_pmo_entity_AppsServiceLine" items="${appsservicelines}" z="a3E7hkTa2WuCLdJMxiRMM1lcFDE=">
+        <table:table data="${appsservicelines}" id="l_com_capgemini_pmo_entity_AppsServiceLine" path="/appsservicelines" z="SoIMNM0ctcycCImKnCEsopAQMko=">
+            <table:column id="c_com_capgemini_pmo_entity_AppsServiceLine_idp" property="idp" z="X57gbX5lTdi4TVCyYDRJGzDPXIc="/>
+            <table:column id="c_com_capgemini_pmo_entity_AppsServiceLine_serviceline" property="serviceline" z="DivfCTMk+sDcPYoIlqLeY03zcBo="/>
+            <table:column id="c_com_capgemini_pmo_entity_AppsServiceLine_Active" property="active" z="6uD43Da1FpHWMf6BpeKvzUEBUcI="/>
+            <table:column id="c_com_capgemini_pmo_entity_AppsServiceLine_skills" property="skills" z="O+iQ/Am5FhfDIHX0cgilachoOPc="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_capgemini_pmo_entity_Skills" items="${skillses}" z="gL/9sKtwe0RkquPOHZncsfnLAKk=">
+        <table:table data="${skillses}" id="l_com_capgemini_pmo_entity_Skills" path="/skillses" z="aCF6Pca781XrKuNKfIt6oKGm+pM=">
+            <table:column id="c_com_capgemini_pmo_entity_Skills_skillname" property="skillname" z="yyqK4FRw+soDRsYUSLlzmFRhW8c="/>
+        </table:table>
+    </page:list>
+</div>

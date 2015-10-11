@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_capgemini_pmo_entity_EmployeeSkill" modelAttribute="employeeSkill" path="/employeeskills" render="${empty dependencies}" z="8aJw/MuzKR3/XnbLrroP2nwE7i4=">
+        <field:select field="emp" id="c_com_capgemini_pmo_entity_EmployeeSkill_emp" itemValue="id" items="${employeemasters}" path="/employeemasters" required="true" z="3O5pCsdO8M+YhUnzTeQktuJ5syE="/>
+        <field:select field="primaryskill" id="c_com_capgemini_pmo_entity_EmployeeSkill_primaryskill" items="${primarysecondarys}" path="primarysecondarys" required="true" z="j9VR87weOT9Lp9L+8EMV/Ii5tE4="/>
+        <div id="_fragment_primary_item_">
+            <field:select field="skill" id="c_com_capgemini_pmo_entity_EmployeeSkill_skill" itemValue="id" items="${skillses}" path="/skillses" z="HaFA1HjO2ca7jz9jh60QCA2384g="/>
+        </div>
+        <div id="_fragment_secondary_item_">
+        	<field:select field="secndryskill" id="c_com_capgemini_pmo_entity_EmployeeSkill_secndryskill" itemValue="id" items="${skillses}" path="/skillses" z="6kogn4FWodgtq5jJgogouRnG+Yk="/>
+        </div>
+        <field:input field="yrofexp" id="c_com_capgemini_pmo_entity_EmployeeSkill_yrofexp" validationMessageCode="field_invalid_number" z="urAqb40KNn6yd5lO/JBwpNwwhwY="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_capgemini_pmo_entity_EmployeeSkill" render="${not empty dependencies}" z="7ZzupsKBQ9ByWPrQRjiPqATIF2g="/>
+    <script language="javascript">
+
+        // DOM is ready
+        dojo.addOnLoad(function(){
+               var empID = dijit.byId("_emp_id");
+               var primorsec = dijit.byId("_primaryskill_id");
+                changeidpvalue(empID);
+                var _fragment_item_ = dojo.byId("_fragment_primary_item_");
+                dojo.connect(empID,"onChange",function(evt){              
+				dijit.byId('_skill_id').setDisabled(true); 
+			
+                        dojo.xhrPost({
+                                url: "employeeskills/skillbyidpserviceline",
+                                timeout: 200000,
+                                content: {
+                                	empid :  dojo.trim(empID.value)                                      
+                                }, 
+                                handleAs: "text",
+                                load: function(result){
+                                                dijit.byId('_skill_id').setDisabled(false); 
+                                                _fragment_item_.innerHTML = "" + result;
+                                                Spring.addDecoration(new Spring.ElementDecoration({
+                                                                          elementId : '_skill_id',
+                                                                          widgetType: 'dijit.form.FilteringSelect',
+                                                                          widgetAttrs : {hasDownArrow : true}
+                                                                  }));                                         
+                                }
+                        });
+                });
+       });
+ 	dojo.addOnLoad(function(){
+  
+               var primorsec = dijit.byId("_primaryskill_id");
+               if(primorsec=="PRIMARY")
+               {
+               		dijit.byId('_skill_id').setDisabled(false);
+			dijit.byId('_secndryskill_id').setDisabled(true); 
+		}
+		if(primorsec=="SECONDARY")
+		{
+			dijit.byId('_secndryskill_id').setDisabled(false); 
+			dijit.byId('_skill_id').setDisabled(true);					
+		}               
+                 dojo.connect(primorsec,"onChange",function(evt){  
+                 if(primorsec=="PRIMARY")
+                 {
+                 	dijit.byId('_skill_id').setDisabled(false);
+			dijit.byId('_secndryskill_id').setDisabled(true); 
+		}
+		if(primorsec=="SECONDARY")
+		{
+			dijit.byId('_secndryskill_id').setDisabled(false); 
+			dijit.byId('_skill_id').setDisabled(true);					
+		}
+		});
+       });       
+        function changeidpvalue(empID) {
+        	empID.set("value", "187");
+	}
+	</script>
+</div>

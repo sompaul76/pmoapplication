@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_capgemini_pmo_entity_Account" object="${account}" path="/accounts" z="uzsV9EopIKQfd55Tp/BqawAginQ=">
+        <field:display field="idp" id="s_com_capgemini_pmo_entity_Account_idp" object="${account}" z="oPmBt7Tm9PCIDSryA8jeRnMmRBU="/>
+        <field:display field="name" id="s_com_capgemini_pmo_entity_Account_name" object="${account}" z="Zad4izsCTmn/ndrk5YG4oYflti8="/>
+        <field:display field="accountexec" id="s_com_capgemini_pmo_entity_Account_accountexec" object="${account}" z="znQHvnZukq3lRdaU3bw1nYboHBQ="/>
+        <field:display field="pmocontact" id="s_com_capgemini_pmo_entity_Account_pmocontact" object="${account}" z="p6mCENx51t5KLSz+Fpynt3ZVpcg="/>
+        <field:display field="headcount" id="s_com_capgemini_pmo_entity_Account_headcount" object="${account}" z="67igRgbbv86XV04ycdrMTBP1Zoo="/>
+    </page:show>
+</div>

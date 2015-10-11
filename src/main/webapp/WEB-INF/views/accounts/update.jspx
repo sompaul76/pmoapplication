@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_capgemini_pmo_entity_Account" modelAttribute="account" path="/accounts" versionField="Version" z="IiafF25kvhyAwNuWsYn39WgD6is=">
+        <field:select field="idp" id="c_com_capgemini_pmo_entity_Account_idp" itemValue="id" items="${idps}" path="/idps" required="true" z="dvctieMTK8lSe04+LJgecc1ID/c="/>
+        <field:input field="name" id="c_com_capgemini_pmo_entity_Account_name" required="true" z="user-managed"/>
+        <field:input field="accountexec" id="c_com_capgemini_pmo_entity_Account_accountexec" z="user-managed"/>
+        <field:input field="pmocontact" id="c_com_capgemini_pmo_entity_Account_pmocontact" z="user-managed"/>
+        <field:input field="headcount" id="c_com_capgemini_pmo_entity_Account_headcount" validationMessageCode="field_invalid_integer" z="4Fc/CLEqLgCy8GjqCXdjXXDoE64="/>
+    </form:update>
+</div>

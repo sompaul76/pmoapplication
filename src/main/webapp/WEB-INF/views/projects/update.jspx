@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_capgemini_pmo_entity_Project" modelAttribute="project" path="/projects" versionField="Version" z="z2U6RkKQVgZ9bJf/T63toV2KiK0=">
+        <field:select field="idpname" id="c_com_capgemini_pmo_entity_Project_idpname" itemValue="id" items="${idps}" path="/idps" required="true" z="TLQD6hVJEbD0KEEUutl9Wnd5MEs="/>
+        <field:select field="account" id="c_com_capgemini_pmo_entity_Project_account" itemValue="id" items="${accounts}" path="/accounts" z="3hT2xWVnGDJ1gi9IagWs5AdaRo8="/>
+        <field:input field="projectCode" id="c_com_capgemini_pmo_entity_Project_projectCode" required="true" z="user-managed"/>
+        <field:input field="projectName" id="c_com_capgemini_pmo_entity_Project_projectName" required="true" z="user-managed"/>
+        <field:textarea field="description" id="c_com_capgemini_pmo_entity_Project_description" z="3RoYdhSGvoRtNF8CT2UgsPF4Hkw="/>
+        <field:datetime dateTimePattern="${project_startdate_date_format}" field="startdate" id="c_com_capgemini_pmo_entity_Project_startdate" z="Lm72OduUYVrlcoUQuVte9eb7VtA="/>
+        <field:datetime dateTimePattern="${project_enddate_date_format}" field="enddate" id="c_com_capgemini_pmo_entity_Project_enddate" z="aSbJRPQuu7fAM5DN8OYnv4C95TY="/>
+        <field:select field="currency" id="c_com_capgemini_pmo_entity_Project_currency" items="${currencys}" path="currencys" z="gyCkPCVkwssFb/v5Nu85RN/RbBk="/>
+        <field:input field="budcm" id="c_com_capgemini_pmo_entity_Project_budcm" validationMessageCode="field_invalid_number" z="j0Y1Ys/5aLtFVRA5NPR+y7mZRt8="/>
+        <field:input field="budpyrd" id="c_com_capgemini_pmo_entity_Project_budpyrd" validationMessageCode="field_invalid_number" z="uv9gpP4BKnbXW8tCN0hcwKSoH9c="/>
+        <field:input field="budheadcount" id="c_com_capgemini_pmo_entity_Project_budheadcount" validationMessageCode="field_invalid_number" z="xSU32fg/+V88KGahnqk3GDPo3Qg="/>
+        <field:input field="revenue" id="c_com_capgemini_pmo_entity_Project_revenue" validationMessageCode="field_invalid_number" z="mMAp8S/8BNLO8gu9UvBv/8SB62E="/>
+        <field:input field="engagmanager" id="c_com_capgemini_pmo_entity_Project_engagmanager" z="user-managed"/>
+        <field:input field="projmanager" id="c_com_capgemini_pmo_entity_Project_projmanager" z="user-managed"/>
+    </form:update>
+</div>

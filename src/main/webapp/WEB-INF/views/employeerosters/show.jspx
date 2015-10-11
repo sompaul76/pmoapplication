@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_capgemini_pmo_entity_EmployeeRoster" object="${employeeroster}" path="/employeerosters" z="LGR/R7ifribv0FBFzKRn474t5kY=">
+        <field:display field="emp" id="s_com_capgemini_pmo_entity_EmployeeRoster_emp" object="${employeeroster}" z="mUXR/4F4S8Z267mPfDPr8x+YbfI="/>
+        <field:display field="projectcode" id="s_com_capgemini_pmo_entity_EmployeeRoster_projectcode" object="${employeeroster}" z="J24sEjI9X+4+ggDGYnAJHolDC58="/>
+        <field:display calendar="true" dateTimePattern="${employeeRoster_taggingstartdate_date_format}" field="taggingstartdate" id="s_com_capgemini_pmo_entity_EmployeeRoster_taggingstartdate" object="${employeeroster}" z="FsQzXVd7w8F0vdqF3LmtJNCEOoE="/>
+        <field:display calendar="true" dateTimePattern="${employeeRoster_taggingenddate_date_format}" field="taggingenddate" id="s_com_capgemini_pmo_entity_EmployeeRoster_taggingenddate" object="${employeeroster}" z="VnoBhgMGDzHNoejMUOhixb8LN58="/>
+        <field:display field="billability" id="s_com_capgemini_pmo_entity_EmployeeRoster_billability" object="${employeeroster}" z="sjTIHFU/2l5zFY9dcDRI9Kv0bnA="/>
+        <field:display field="availability" id="s_com_capgemini_pmo_entity_EmployeeRoster_availability" object="${employeeroster}" z="TGvOUGuELJ3mHpTFQDxfxbViJt8="/>
+        <field:display field="source" id="s_com_capgemini_pmo_entity_EmployeeRoster_source" object="${employeeroster}" z="G8of+xjtgGQND2UvbjOXSgcHvRc="/>
+        <field:display field="accountstatus" id="s_com_capgemini_pmo_entity_EmployeeRoster_accountstatus" object="${employeeroster}" z="c3NvTGjiLsUv7mpghRpx1mOSHt0="/>
+        <field:display calendar="true" dateTimePattern="${employeeRoster_accntstartdate_date_format}" field="accntstartdate" id="s_com_capgemini_pmo_entity_EmployeeRoster_accntstartdate" object="${employeeroster}" z="evGhzHX6jEEp9Y/S/mvwGKYjrmA="/>
+        <field:display calendar="true" dateTimePattern="${employeeRoster_rolloffdate_date_format}" field="rolloffdate" id="s_com_capgemini_pmo_entity_EmployeeRoster_rolloffdate" object="${employeeroster}" z="VX2XT4ULnUS9EEgAlR3b80Bp8VU="/>
+        <field:display field="rolloffreason" id="s_com_capgemini_pmo_entity_EmployeeRoster_rolloffreason" object="${employeeroster}" z="CPiE3+iWiW3JoUxAAqqikaLY0TA="/>
+        <field:display field="pmocomments" id="s_com_capgemini_pmo_entity_EmployeeRoster_pmocomments" object="${employeeroster}" z="T9YVJbMCvgBgTP+fLT0nQnh+xvg="/>
+    </page:show>
+</div>

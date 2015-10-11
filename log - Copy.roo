@@ -1,0 +1,165 @@
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log opened at 2015-09-25 10:14:54
+project setup --topLevelPackage com.capgemini.pmo --projectName capgemini --java 7 --packaging JAR
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log closed at 2015-09-25 10:14:56
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log opened at 2015-09-25 10:15:00
+jpa setup --database ORACLE --provider HIBERNATE 
+entity jpa --class com.capgemini.pmo.entity.IDP --activeRecord false --testAutomatically true
+field string --fieldName name --sizeMax 10 --notNull 
+field string --fieldName description --sizeMax 20 
+repository jpa --interface com.capgemini.pmo.dao.IDPDAO --entity ~.entity.IDP
+service type --interface com.capgemini.pmo.service.IDPService --entity ~.dao.IDPDAO
+web mvc setup
+web mvc scaffold --class com.capgemini.pmo.controller.IDPController --backingType ~.entity.IDP
+entity jpa --class com.capgemini.pmo.entity.ServiceLine --activeRecord false --testAutomatically true
+field string --fieldName name --notNull --sizeMax 20
+repository jpa --interface com.capgemini.pmo.dao.ServiceLineDAO --entity ~.entity.ServiceLine
+service type --interface com.capgemini.pmo.service.ServiceLineService --entity ~.dao.ServiceLineDAO
+web mvc scaffold --class com.capgemini.pmo.controller.ServiceLineController --backingType ~.entity.ServiceLine
+entity jpa --class com.capgemini.pmo.entity.AppsServiceLine --activeRecord false --testAutomatically true
+field reference --fieldName idp --type ~.entity.IDP --cardinality MANY_TO_ONE --joinColumnName ID_IDP
+field reference --fieldName serviceline --type ~.entity.ServiceLine --cardinality MANY_TO_ONE --joinColumnName ID_SERVICELINE
+repository jpa --interface com.capgemini.pmo.dao.AppsServiceLineDAO --entity ~.entity.AppsServiceLine
+service type --interface com.capgemini.pmo.service.AppsServiceLineService --entity ~.dao.AppsServiceLineDAO
+web mvc scaffold --class com.capgemini.pmo.controller.AppsServiceLineController --backingType ~.entity.AppsServiceLine
+entity jpa --class com.capgemini.pmo.entity.Account --activeRecord false --testAutomatically true
+field string --fieldName name --notNull --sizeMax 20
+repository jpa --interface com.capgemini.pmo.dao.AccountDAO --entity ~.entity.Account
+service type --interface com.capgemini.pmo.service.AccountService --entity ~.dao.AccountDAO
+web mvc scaffold --class com.capgemini.pmo.controller.AccountController --backingType ~.entity.Account
+entity jpa --class com.capgemini.pmo.entity.Project --activeRecord false --testAutomatically true
+field reference --type ~.entity.IDP --fieldName idpname --cardinality MANY_TO_ONE --notNull --joinColumnName ID_IDP
+field reference --type ~.entity.Account --fieldName account --cardinality MANY_TO_ONE --joinColumnName ID_ACCOUNT
+repository jpa --interface com.capgemini.pmo.dao.ProjectDAO --entity ~.entity.Project
+service type --interface com.capgemini.pmo.service.ProjectService --entity ~.dao.ProjectDAO
+web mvc scaffold --class com.capgemini.pmo.controller.ProjectController --backingType ~.entity.Project
+field number --fieldName projectCode --type java.lang.Integer --notNull 
+field string --fieldName projectName --notNull --sizeMax 20
+field string --fieldName description --sizeMax 20
+field date --fieldName startdate --type java.util.Calendar
+field date --fieldName enddate --type java.util.Calendar
+entity jpa --class com.capgemini.pmo.entity.EmployeeRoster --activeRecord true --testAutomatically true
+field number --fieldName EmpCode --type java.lang.Integer --notNull 
+field string --fieldName firstName --notNull --sizeMax 40
+field string --fieldName lastName --notNull --sizeMax 40
+field string --fieldName primaryskill --notNull --sizeMax 40
+field string --fieldName secondaryskill --sizeMax 40
+field enum --fieldName band --type com.capgemini.pmo.EmpBand
+field enum --fieldName band --type com.capgemini.pmo.entity.EmpBand
+enum type --class com.capgemini.pmo.entity.EmpBand
+enum constant --name SE
+enum constant --name SSE
+enum constant --name C
+enum constant --name SC
+enum constant --name M
+enum constant --name SM
+// [failed] field enum --fieldName level --type com.capgemini.pmo.EmpLevel
+field enum --fieldName EmpLevel --type com.capgemini.pmo.entity.EmpLevel
+enum type --class com.capgemini.pmo.entity.EmpLevel
+enum constant --name P1
+enum constant --name P2
+enum constant --name P3
+enum constant --name P4
+enum constant --name P5
+enum constant --name M1
+enum constant --name M2
+enum constant --name M3
+field string --fieldName source --sizeMax 40
+focus --class ~.entity.EmployeeRoster
+field string --fieldName source --sizeMax 40
+field date --fieldName dateofjoining --type java.util.Calendar
+field enum --fieldName billability --type com.capgemini.pmo.entity.EmpBillability
+enum type --class com.capgemini.pmo.entity.EmpBillability
+enum constant --name BT
+enum constant --name NBT
+enum constant --name SHADOW
+field enum --fieldName location --type com.capgemini.pmo.entity.EmpLocation
+focus --class ~.entity.EmployeeRoster
+field enum --fieldName location --type com.capgemini.pmo.entity.EmpLocation
+enum type --class com.capgemini.pmo.entity.EmpLocation
+enum constant --name BENGALURU
+enum constant --name MUMBAI
+enum constant --name CHENNAI
+enum constant --name KOLKATA
+enum constant --name HYDERABAD
+enum constant --name NOIDA
+enum constant --name PUNE
+focus --class ~.entity.EmployeeRoster
+field date --fieldName taggingstartdate --type java.util.Calendar
+field date --fieldName taggingenddate --type java.util.Calendar
+field string --fieldName rightshore 
+field enum --fieldName gender --type com.capgemini.pmo.entity.Gender
+enum type --class com.capgemini.pmo.entity.Gender
+enum constant --name MALE
+enum constant --name FEMALE
+focus --class ~.entity.EmployeeRoster
+repository jpa --interface com.capgemini.pmo.dao.EmployeeRosterDAO --entity ~.entity.EmployeeRoster
+service type --interface com.capgemini.pmo.service.EmployeeRosterService --entity ~.dao.EmployeeRosterDAO
+web mvc scaffold --class com.capgemini.pmo.controller.EmployeeRosterController --backingType ~.entity.EmployeeRoster
+field reference --fieldName projectcode --type ~.entity.Project --cardinality MANY_TO_ONE --joinColumnName ID_PROJCODE
+field string --fieldName accountStatus 
+field enum --fieldName accountstatus --type com.capgemini.pmo.entity.AccountStatus
+enum type --class com.capgemini.pmo.entity.AccountStatus
+enum constant --name ONBOARDED
+enum constant --name ACTIVE
+web mvc scaffold --class com.capgemini.pmo.controller.EmployeeRosterController --backingType ~.entity.EmployeeRoster
+focus --class ~.entity.EmployeeRoster
+field enum --fieldName accountstatus --type com.capgemini.pmo.entity.AccountStatus
+enum type --class com.capgemini.pmo.entity.AccountStatus
+enum constant --name ONBOARDED
+enum constant --name ACTIVE
+focus --class ~.entity.EmployeeRoster
+web mvc scaffold --class com.capgemini.pmo.controller.EmployeeRosterController --backingType ~.entity.EmployeeRoster
+web mvc scaffold --class com.capgemini.pmo.controller.EmployeeRosterController --backingType ~.entity.EmployeeRoster
+enum type --class com.capgemini.pmo.entity.AccountActiveStatus
+enum constant --name ACTIVE
+enum type --class com.capgemini.pmo.entity.AccountOnboardedStatus
+enum constant --name ONBOARDED
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log closed at 2015-09-25 20:03:02
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log opened at 2015-09-25 20:16:45
+focus --class ~.entity.EmployeeRoster
+finder list --class ~.entity.EmployeeRoster
+finder add --finderName findEmployeeRostersByAccountstatusEquals
+web mvc scaffold --class ~.controller.EmployeeRosterController --backingType ~.entity.EmployeeRoster
+// [failed] web mvc finder add --formBackingType ~.entity.EmployeeRoster
+focus --class ~.controller.EmployeeRosterController
+web mvc finder add --formBackingType ~.entity.EmployeeRoster
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log closed at 2015-09-25 21:28:18
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log opened at 2015-09-25 21:51:37
+security setup
+quit
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log closed at 2015-09-25 22:59:45
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log opened at 2015-09-26 19:34:10
+focus --class ~.entity.EmployeeRoster
+field reference --fieldName idpref --type ~.entity.IDP --cardinality MANY_TO_ONE --joinColumnName ID_IDPREF
+field reference --fieldName serviceline --type ~.entity.ServiceLine --cardinality MANY_TO_ONE --joinColumnName ID_SRVLINEREF
+entity jpa --class com.capgemini.pmo.entity.InternalOrg --activeRecord false --testAutomatically
+field string --fieldName OrgName --sizeMax 40
+repository jpa --interface com.capgemini.pmo.dao.InternalOrgDAO --entity ~.entity.InternalOrg
+service type --interface com.capgemini.pmo.service.InternalOrgService --entity ~.dao.InternalOrgDAO
+web mvc scaffold --class com.capgemini.pmo.controller.InternalOrgController --backingType ~.entity.InternalOrg
+focus --class ~.entity.Project
+field reference --fieldName internalorg --type ~.entity.InternalOrg --cardinality MANY_TO_ONE --joinColumnName ID_INTORG
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log closed at 2015-09-27 01:41:17
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log opened at 2015-09-27 06:14:31
+focus --class ~.entity.EmployeeRoster
+focus --class ~.entity.AccountStatus
+enum constant --name RESIGNED
+enum constant --name ROLLOFF
+focus --class ~.entity.EmployeeRoster
+field string --fieldName pmocomments
+enum type --class com.capgemini.pmo.entity.RightShore
+enum constant --name OFFSHORE
+enum constant --name ONSHORE
+focus --class ~.entity.EmpLevel
+enum constant --name M4
+enum constant --name M6
+focus --class ~.entity.EmpBand
+enum constant --name D
+focus --class ~.entity.EmpBillability
+enum constant --name IDENTIFIED
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log closed at 2015-09-27 18:00:49
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log opened at 2015-10-04 07:44:19
+entity jpa --class com.capgemini.pmo.entity.BuisnessUnit --activeRecord false --testAutomatically true --table T_BUISNESS_UNIT
+field string --fieldName BUName --sizeMax 50 --notNull --column C_BU_NAME
+field string --fieldName BUHead --sizeMax 100 --notNull --column C_BU_HEAD
+field boolean --fieldName BUActive --column C_BU_ACTIVE

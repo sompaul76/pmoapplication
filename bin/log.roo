@@ -1,0 +1,3 @@
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log opened at 2015-09-25 10:14:54
+project setup --topLevelPackage com.capgemini.pmo --projectName capgemini --java 7 --packaging JAR
+// Spring Roo 2.0.0.M1 [rev 33e5d76] log closed at 2015-09-25 10:14:56

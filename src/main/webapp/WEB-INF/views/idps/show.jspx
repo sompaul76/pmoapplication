@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_capgemini_pmo_entity_IDP" object="${idp_}" path="/idps" z="PtPd9dNRapHKsRiC81hswcDH/ZQ=">
+        <field:display field="buorg" id="s_com_capgemini_pmo_entity_IDP_buorg" object="${idp_}" z="mWiQyjdP7H3bj0TySAhnhQAh2+U="/>
+        <field:display field="name" id="s_com_capgemini_pmo_entity_IDP_name" object="${idp_}" z="+1V+Xr9tjcMOGz58b2MuBbeHrNs="/>
+        <field:display field="idphead" id="s_com_capgemini_pmo_entity_IDP_idphead" object="${idp_}" z="QLoxDYK0BCE+EjYgiJBrzvydg1Y="/>
+        <field:display field="activeFlag" id="s_com_capgemini_pmo_entity_IDP_ActiveFlag" object="${idp_}" z="Cl1mFAlMGA8nz0FmIkdsTdrYgbw="/>
+    </page:show>
+</div>
